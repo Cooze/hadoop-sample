@@ -8,19 +8,18 @@ import sys
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 
-#files = sys.argv[0]
 files = "/wordcount"
 
 def main():
     sc = SparkContext("local","WordCount")
 
-    # text_file rdd object
+    # 将hdfs中的文件成rdd
     rdd = sc.textFile(files)
 
-    # counts
+    # 统计单词个数
     counts = rdd.flatMap(lambda line: line.split(" ")).map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
 
-    # print on console
+    # 在控制台中打印输出
     results = counts.collect()
 
     for result in results:
