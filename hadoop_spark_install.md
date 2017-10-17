@@ -215,13 +215,13 @@ hadoop fs -mkdir /wordcount
 hadoop fs -put -f WordCount.txt /wordcount
 ```
 3、编写wordcount程序并执行：
-1）mapreduce 版本示例代码，[跳转至github地址](https://github.com/Cooze/hadoop-sample/mapreduce-wordcount)<br>
+1）mapreduce 版本示例代码，[跳转至github地址](https://github.com/Cooze/hadoop-sample/tree/master/mapreduce-wordcount)<br>
 将git上的程序编译之后上传至hadoop服务器，键入如下命令运行mapreduce：
 ```
 hadoop jar mapreduce-wordcount.jar org.cooze.hadoop.mapreduce.wordcount.WordCount /wordcount /output
 ```
 ---
-2) spark java版本示例代码，[跳转至github地址](https://github.com/Cooze/hadoop-sample/spark-wordcount-java)<br>
+2) spark java版本示例代码，[跳转至github地址](https://github.com/Cooze/hadoop-sample/tree/master/spark-wordcount-java)<br>
 将git上的程序编译之后上传至hadoop服务器，键入如下命令将spark程序提交到spark中运行：
 ```
 spark-submit --master spark://localhost:7077 \
@@ -230,7 +230,7 @@ spark-submit --master spark://localhost:7077 \
   ./spark-wordcount-java.jar /wordcount
 ```
 ---
-3) spark scala版本示例代码，[跳转至github地址](https://github.com/Cooze/hadoop-sample/spark-wordcount-scala)<br>
+3) spark scala版本示例代码，[跳转至github地址](https://github.com/Cooze/hadoop-sample/tree/master/spark-wordcount-scala)<br>
 将git上的程序编译之后上传至hadoop服务器，键入如下命令将spark程序提交到spark中运行：
 ```
 spark-submit --master spark://localhost:7077 \
@@ -239,7 +239,7 @@ spark-submit --master spark://localhost:7077 \
   ./spark-wordcount-scala.jar /wordcount
 ```
 ---
-4) spark python版本示例代码，[跳转至github地址](https://github.com/Cooze/hadoop-sample/spark-wordcount-python)<br>
+4) spark python版本示例代码，[跳转至github地址](https://github.com/Cooze/hadoop-sample/tree/master/spark-wordcount-python)<br>
 将git上的程序编译之后上传至hadoop服务器，键入如下命令将spark程序提交到spark中运行：
 ```
 spark-submit --executor-memory 512M --total-executor-cores 2 \
